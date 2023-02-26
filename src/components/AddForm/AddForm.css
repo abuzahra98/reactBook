@@ -1,0 +1,32 @@
+.card {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 320px;
+    height: 277px;
+}
+
+.submit-btn {
+  background: #37a2f2;
+  border: none;
+  padding: 0.5rem 4rem;
+  font-size: 16px;
+  color: white;
+  border-radius: 15px;
+}
+
+.form-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container {
+  margin-block: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

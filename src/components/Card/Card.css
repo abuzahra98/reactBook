@@ -1,0 +1,30 @@
+.card-container {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-image {
+  width: 10rem;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.Title {
+  color: black;
+}
+
+.delete-btn {
+  color: white;
+  background: red;
+  border: none;
+  padding: 0.3rem 1rem;
+  margin: 1rem;
+  margin-inline-start: 13rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
