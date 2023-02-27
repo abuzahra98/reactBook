@@ -6,22 +6,25 @@ import api from '../src/api';
 
 const App = () => {
   const [data, setData] = useState([]);
-  useEffect(() => {
-    getData();
-  }, []);
 
   const getData = async () => {
     const response = await api.get('/books');
     setData(response.data);
   };
+  
+  useEffect(() => {
+    getData();
+  }, []);
+
+ 
 
   return (
-    <div>
-      <CardItem items={data} />
-      <div className='form-container'>
+    <>
+      <CardItem onSubmit={getData} items={data} />
+      <div  className='form-container'>
         <AddForm onSubmit={getData} />
       </div>
-    </div>
+    </>
   );
 }
 
