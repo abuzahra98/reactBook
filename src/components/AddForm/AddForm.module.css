@@ -24,9 +24,5 @@
   flex-direction: column;
 }
 
-.form-container {
-  margin-block: 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
+

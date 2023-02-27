@@ -7,6 +7,14 @@
   color: #88482d;
   margin-top: 60px;
 }
+
+.form-container {
+  margin-block: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* 
 .App-logo {
   height: 40vmin;

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Card.css';
+import style from './Card.module.css';
 
 const card = ({ items }) => {
     console.log(items);
@@ -7,11 +7,11 @@ const card = ({ items }) => {
         <div className='App'>
 
             {items.map(book => (
-                <div className='card-container' key={book.id}>
+                <div className={style["card-container"]} key={book.id}>
                     <h1>{book.id}</h1>
-                    <div>  <span className='Title'  >Title:</span>   {book.title}</div>
-                    <img className='card-image' alt='dd' src={book.image} />
-                    <button className="delete-btn"  >delete</button>
+                    <div>  <span  className={style.Title}  >Title:</span>   {book.title}</div>
+                    <img className={style["card-image"]} alt='dd' src={book.image} />
+                    <button className={style["delete-btn"]} >delete</button>
                 </div>
             ))}
         </div>

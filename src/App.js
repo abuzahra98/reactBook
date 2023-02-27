@@ -15,11 +15,16 @@ const App = () => {
     fetchData();
   }, []);
 
+  const getData = async () => {
+     const response = await api.get('/books');
+    setData(response.data);
+  };
+
   return (
     <div>
       <CardItem items={data} />
       <div className='form-container'>
-        <AddForm />
+        <AddForm onSubmit={getData} />
       </div>
     </div>
   );
