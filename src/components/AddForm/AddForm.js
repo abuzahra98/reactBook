@@ -12,8 +12,8 @@ const AddForm = (props) => {
         event.preventDefault();
         console.log(formData);
         const response = await api.post('/books', formData);
-        response.statusText === "OK"  ? props.onSubmit() :  console.log(response);
-       
+        response.statusText === "OK" ? props.onSubmit() : console.log(response);
+
     }
 
     const handleChange = (event) => {
@@ -27,12 +27,12 @@ const AddForm = (props) => {
     return (
         <form className={style.card} onSubmit={handleSubmit}>
             <label className={style["form-card"]}>
-                Title:
-                <input type="text" name="title" value={formData.title} onChange={handleChange} />
+                Title
+                <input className={style.input} type="text" name="title" value={formData.title} onChange={handleChange} />
             </label>
             <label className={style["form-card"]}>
-                Image:
-                <input type="text" name="image" value={formData.image} onChange={handleChange} />
+                Image
+                <input className={style.input} type="text" name="image" value={formData.image} onChange={handleChange} />
             </label>
             <button className={style["submit-btn"]} type="submit">Submit</button>
         </form>
