@@ -6,17 +6,12 @@ import api from '../src/api';
 
 const App = () => {
   const [data, setData] = useState([]);
-
   useEffect(() => {
-    const fetchData = async () => {
-      const response = await api.get('/books');
-      setData(response.data);
-    };
-    fetchData();
+    getData();
   }, []);
 
   const getData = async () => {
-     const response = await api.get('/books');
+    const response = await api.get('/books');
     setData(response.data);
   };
 

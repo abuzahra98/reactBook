@@ -2,8 +2,7 @@ import React from 'react';
 import style from './Card.module.css';
 
 const card = ({ items }) => {
-    console.log(items);
-    return (
+     return (
         <div className='App'>
 
             {items.map(book => (
