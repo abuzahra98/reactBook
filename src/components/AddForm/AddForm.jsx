@@ -1,6 +1,6 @@
 import style from './AddForm.module.css';
 import React, { useState } from 'react';
-import api from '../../../src/api';
+import api from '../../api';
 
 const AddForm = (props) => {
     const [formData, setFormData] = useState({

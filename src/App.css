@@ -5,16 +5,21 @@
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: #88482d;
-  margin-top: 60px;
+  padding-top: 100px;
 }
 
 .form-container {
-  margin-block: 5rem;
-  display: flex;
+  padding-block: 5rem;
+    display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.mainContainer {
+  background-color: #c8ccde;
+  padding-inline: 2rem;
+
+}
 /* 
 .App-logo {
   height: 40vmin;
