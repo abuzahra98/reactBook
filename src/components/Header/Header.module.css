@@ -4,35 +4,35 @@
   color: white;
   margin: auto;
   height: 85px;
-   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-   position: absolute;
-   z-index: 999999;
-   top: 5rem;
-   display: flex;
-   align-items: center;
-   left: 36px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: absolute;
+  z-index: 999999;
+  top: 5rem;
+  display: flex;
+  align-items: center;
+  left: 36px;
 
-   display: flex;
-   flex-direction: row;
-   justify-content: space-around;
-   
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .logoContainer {
   width: 95%;
   margin: auto;
   margin-block-end: 2rem;
-  height: 90px;  align-items: center;
-  /* background-color: #343b7e4f; */
+  height: 90px;
+  align-items: center;
   display: flex;
   justify-content: space-between;
 }
 
 .logo {
-
-  width: 85px;
+  width: 150px;
 }
 
 .headerLabel {
   font-size: 22px;
   font-weight: 700;
+  color: white;
+  text-decoration: none;
 }

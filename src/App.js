@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import CardItem from './components/Card/Card';
-import AddForm from './components/AddForm/AddForm';
+import { Routes, Route } from "react-router-dom";
+import Home from './pages/Home';
+import Header from './components/Header/Header';
 import './App.css';
 import api from '../src/api';
-import Header from '../src/components/Header/Header'
+import AboutUs from './pages/AboutUs';
+import ContactUs from './pages/ContactUs';
+import AddBook from './pages/AddBook';
+import SignUp from './pages/SignUp';
 const App = () => {
   const [data, setData] = useState([]);
 
@@ -20,13 +24,22 @@ const App = () => {
 
   return (
     <>
-      <Header />
-      <div className='mainContainer'>
-        <CardItem onSubmit={getData} items={data} />
-        <div className='form-container'>
-          <AddForm onSubmit={getData} />
-        </div>
-      </div>
+      <Header/>
+      <Routes>
+
+
+        <Route path="/" element={<Home data={data} onSubmit={getData} />} />
+        <Route path="/about" element={<AboutUs/>}/>
+        <Route path="/contact" element={<ContactUs/>}/>
+        <Route path="/addBook" element={<AddBook onSubmit={getData} />}/>
+        <Route path="/signup" element={<SignUp/>}/>
+      </Routes>
+        
+        
+      
+    
+    
+      
     </>
   );
 }

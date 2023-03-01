@@ -1,12 +1,11 @@
 .App {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: #88482d;
-  padding-top: 100px;
-}
+ }
 
 .form-container {
   padding-block: 5rem;
@@ -18,6 +17,8 @@
 .mainContainer {
   background-color: #c8ccde;
   padding-inline: 2rem;
+  padding-top: 100px;
+  min-height: 76vh;
 
 }
 /* 
