@@ -2,7 +2,7 @@ import React from 'react';
 import style from './Card.module.css';
 import api from '../../api'
 const card = (props) => {
-
+ 
     const deleteItem = async (id) => {
         const response = await api.delete(`/books/${id}`)
         console.log(response)
