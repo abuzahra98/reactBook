@@ -3,27 +3,27 @@ import React, { useState } from "react";
 import api from "../../api";
 
 const AddForm = (props) => {
-//    const [base64String, setBase64String] = useState("");
+  //    const [base64String, setBase64String] = useState("");
 
   const [formData, setFormData] = useState({
     title: "",
     image: "",
+    desc: "",
   });
 
   function handleFileUpload(event) {
     var file = event.target.files[0];
     var reader = new FileReader();
     reader.onloadend = function () {
-        setFormData(prevstate=>({...prevstate, image:reader.result}));
+      setFormData((prevstate) => ({ ...prevstate, image: reader.result }));
     };
     reader.readAsDataURL(file);
-   }
+  }
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-     const response = await api.post("/books", formData);
+    const response = await api.post("/books", formData);
     response.statusText === "OK" ? props.onSubmit() : console.log(response);
- 
   };
 
   const handleChange = (event) => {
@@ -47,11 +47,27 @@ const AddForm = (props) => {
         />
       </label>
       <label className={style["form-card"]}>
+        description
+        <input
+          className={style.input}
+          type="text"
+          name="desc"
+          value={formData.desc}
+          onChange={handleChange}
+        />
+      </label>
+      <label className={style["form-card"]}>
         Image
         {/* <input className={style.input} type="text" name="image" value={formData.image} onChange={handleChange} /> */}
         <div className={style.imageInput}>
           <input type="file" onChange={handleFileUpload} />
-          {formData.image && <img className={style.preImage} src={formData.image} alt="Uploaded" />}
+          {formData.image && (
+            <img
+              className={style.preImage}
+              src={formData.image}
+              alt="Uploaded"
+            />
+          )}
         </div>
       </label>
       <button className={style["submit-btn"]} type="submit">

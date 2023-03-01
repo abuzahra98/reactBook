@@ -21,6 +21,23 @@
   min-height: 76vh;
 
 }
+
+
+.mainContainerSignup {
+  background-color: #c8ccde;
+  padding-inline: 2rem;
+  padding-top: 100px;
+  min-height: 76vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.signupImage {
+  border-radius: 15px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
 /* 
 .App-logo {
   height: 40vmin;
