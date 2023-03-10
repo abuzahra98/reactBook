@@ -1,9 +1,11 @@
 import style from "./AddForm.module.css";
 import React, { useState } from "react";
 import api from "../../api";
+import { useNavigate } from "react-router-dom";
 
 const AddForm = (props) => {
   //    const [base64String, setBase64String] = useState("");
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     title: "",
@@ -23,7 +25,14 @@ const AddForm = (props) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const response = await api.post("/books", formData);
-    response.statusText === "OK" ? props.onSubmit() : console.log(response);
+    if(response.statusText === "OK" ){
+      props.onSubmit()
+      navigate('/');
+
+    }
+    else{
+      console.log(response);
+    }
   };
 
   const handleChange = (event) => {
