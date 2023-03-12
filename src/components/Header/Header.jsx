@@ -36,6 +36,12 @@ const Header = () => {
             SignUp
           </Link>
         </div>
+        
+        <div className={style.headerLabel}>
+          <Link className={style.headerLabel} to="/signin">
+            SignIn
+          </Link>
+        </div>
       </div>
     </div>
   );
