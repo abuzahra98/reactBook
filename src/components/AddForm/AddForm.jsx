@@ -10,7 +10,7 @@ const AddForm = (props) => {
   const [formData, setFormData] = useState({
     title: "",
     image: "",
-    desc: "",
+    description: "",
   });
 
   function handleFileUpload(event) {
@@ -60,8 +60,8 @@ const AddForm = (props) => {
         <input
           className={style.input}
           type="text"
-          name="desc"
-          value={formData.desc}
+          name="description"
+          value={formData.description}
           onChange={handleChange}
         />
       </label>

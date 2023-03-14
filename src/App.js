@@ -9,6 +9,7 @@ import ContactUs from './pages/ContactUs';
 import AddBook from './pages/AddBook';
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
+import ItemDetails from './pages/ItemDetails';
 const App = () => {
   const [data, setData] = useState([]);
 
@@ -35,6 +36,7 @@ const App = () => {
         <Route path="/addBook" element={<AddBook onSubmit={getData} />}/>
         <Route path="/signup" element={<SignUp/>}/>
         <Route path="/signin" element={<SignIn/>}/>
+        <Route path="/ItemDetails" element={<ItemDetails/>}/>
       </Routes>
         
         
