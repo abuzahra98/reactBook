@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import api from "../../src/api";
-import CardItem from "../components/Card/Card";
+import CardItem from "../components/Card/CardComp";
 
 const Home = (props) => {
 //   const [data, setData] = useState([]);

@@ -1,9 +1,11 @@
 import React from 'react';
 import style from './Card.module.css';
 import api from '../../api'
+import { useNavigate } from "react-router-dom";
 
-const card = (props) => {
- 
+const CardComp = (props) => {
+    const navigate = useNavigate();
+
     const deleteItem = async (id) => {
         const response = await api.delete(`/books/${id}`)
         console.log(response)
@@ -12,9 +14,7 @@ const card = (props) => {
         }
     }
     const detailsItem = async (id) => {
-        api.get(`/books/${id}`)
-        console.log(id);
-    
+         navigate(`/ItemDetails?id=${id}`);
     }
 
     return (
@@ -33,4 +33,4 @@ const card = (props) => {
 
 }
 
-export default card
+export default CardComp
