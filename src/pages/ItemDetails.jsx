@@ -14,6 +14,7 @@ const ItemDetails = () => {
   useEffect(() => {
     getData();
   }, []);
+  
   return (
     <div className="mainContainer" >
       {data.map((book) => (
