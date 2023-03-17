@@ -15,7 +15,7 @@ const ItemDetails = () => {
     getData();
   }, []);
   return (
-    <div>
+    <div className="mainContainer" >
       {data.map((book) => (
         <div key={book.id}>
           <img alt="dd" src={book.image} />
