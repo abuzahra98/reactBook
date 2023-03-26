@@ -17,7 +17,8 @@ const ItemDetails = () => {
   
   return (
     <div className="mainContainer" >
-      {data.map((book) => (
+   <div className="productContainer">
+   {data.map((book) => (
         <div key={book.id}>
           <img alt="dd" src={book.image} />
           {/* <h1>{book.id}</h1> */}
@@ -31,6 +32,7 @@ const ItemDetails = () => {
           </div>
         </div>
       ))}
+   </div>
     </div>
   );
 };
