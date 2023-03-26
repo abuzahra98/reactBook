@@ -1,6 +1,11 @@
-function LoadingComp() {
-    const loading = true; // Set this to true or false based on some condition
-  
+// import React, { useState } from "react";
+
+const LoadingComp = () => {
+    const loading = true;
+console.log(loading);
+     // Set this to true or false based on some condition
+    // const [loading, setLoading] = useState(false);
+
     return (
       <div>
         {loading && <p>Loading...</p>}
