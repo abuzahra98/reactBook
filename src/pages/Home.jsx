@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import api from "../../src/api";
+import React from "react";
 import CardComp from "../components/Card/CardComp";
 
 const Home = (props) => {
